@@ -1,5 +1,5 @@
 package lms;
-import AbidProject.Member;
+
 
 import java.util.*;
 
@@ -51,7 +51,7 @@ class LibraryManagementSystem {
         }
         return null;
     }
-    private static List<AbidProject.Member> members = new ArrayList<>();
+    private static List<Member> members = new ArrayList<>();
     public void addMembers() {
 
         Scanner scanner = new Scanner(System.in);
@@ -68,7 +68,7 @@ class LibraryManagementSystem {
 
 
 
-        AbidProject.Member member =new Member(name,ID);
+        Member member =new Member(name,ID);
 
 
         members.add(member);
@@ -83,9 +83,7 @@ class LibraryManagementSystem {
             System.out.println("Name: " + member.getName());
             System.out.println("ID: " + member.getId());
             System.out.println("Borrowed Books:");
-            for (AbidProject.Book book : member.getBorrowedBooks()) {
-                System.out.println("- " + book.getTitle());
-            }
+
             System.out.println("------------------------");
         }
     }
