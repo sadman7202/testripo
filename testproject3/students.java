@@ -17,6 +17,14 @@ public class students {
     Scanner input = new Scanner(System.in);
     public student[] theStudents = new student[100];
     public admin[] theAdmins=new admin[10];
+    {
+        theStudents[0]=new student("Sadman Sakib","241-50-004","1234");
+        theStudents[1]=new student("Fahim Shahriar","241-50-002","1252");
+        theStudents[2]=new student("Najifa Anjum","241-50-029","password");
+        theStudents[3]=new student("Sufia Bindu Nira","241-50-015","2743");
+        count=4;
+    }
+
 
     public static int count = 0;
 
@@ -188,9 +196,10 @@ public class students {
 
         return -1;
     }
+   public static int adcount;
     public void addAdmin(admin a)
     {
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < adcount; i++) {
 
             if (a.regNum.equalsIgnoreCase(
                     theAdmins[i].regNum)) {
@@ -208,9 +217,9 @@ public class students {
             return;
         }
 
-        if (count <= 10) {
-           theAdmins[count] = a;
-            count++;
+        if (adcount <= 10) {
+           theAdmins[adcount] = a;
+            adcount++;
             System.out.println("ADMIN REGISTERD !");
         }
     }
@@ -224,7 +233,7 @@ public class students {
         String pass=input.nextLine();
 
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < adcount; i++) {
 
             if (theAdmins[i].regNum.equalsIgnoreCase(regNum) &&
                     theAdmins[i].password.equals(pass)) {

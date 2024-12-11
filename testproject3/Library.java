@@ -100,8 +100,8 @@ public class Library {
                                             break;
 
                                         case 4:
-                                            student s = new student();
-                                            obStudent.addStudent(s);
+                                            student a = new student();
+                                            obStudent.addStudent(a);
                                             break;
 
                                         case 5:
